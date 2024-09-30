@@ -1,14 +1,14 @@
 import 'package:culculator/screenui.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(Cul());
+  runApp(const Cul());
 }
 
 
 class Cul extends StatefulWidget {
+  const Cul({super.key});
+
   @override
   State<StatefulWidget> createState() =>Fulwed();
 
@@ -23,15 +23,15 @@ class Fulwed extends State{
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text('الة الحاسبة',
+          title: const Text('الة الحاسبة',
             style: TextStyle(fontSize: 30, color: Colors.yellow,),),),
         body: Column(children: [
           Expanded(
             flex: 2,
             child: Container(
               alignment: Alignment.bottomRight,
-              decoration: BoxDecoration(color: Colors.white54),
-              child: Text(result, style: TextStyle(color: Colors.black,
+              decoration: const BoxDecoration(color: Colors.white54),
+              child: Text(result, style: const TextStyle(color: Colors.black,
                   fontSize: 30,
                   fontWeight: FontWeight.w600),),),
           ),
@@ -133,7 +133,7 @@ class Fulwed extends State{
   }
   void onDot (String _){
     if(result.contains('.')) return;
-    result=result + '.';
+    result='$result.';
     setState(() {});
   }
 
